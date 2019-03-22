@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>USER</title>
+</head>
+<body bgcolor="">
+        {% if user != 'NAME NOT FOUND' %}
+        <h1> <font color='pink'>Sau đây là 1 vài thông tin về {{username}}</font></h1>
+        <h3>Name: {{user.name}} <br>
+        Age: {{user.age}} <br>
+        Work: {{user.work}} <br>
+        School: {{user.school}} <br>
+        Hobbies: {{user.hobbies}} </h3>
+        {% else %}
+        <h1>{{user}}</h1>
+        {% endif %}
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- {{poems}} -->
+    {% for poem in poems %}
+        <h1>bai tho so {{ loop.index }}</h1>
+        <!-- loop.index or loop.index0 la cong thuc lun nha -->
+        <h3>{{ poem.title }}</h3>
+        <p>{{ poem.content }}</p>
+        {% if poem.gender =='female' %}
+            <h5>by: Ms {{ poem.author }}</h5>
+        {% elif poem.gender =='male' %}
+            <h5>by: Mr {{ poem.author }}</h5>
+        {% endif %}
+        <hr>
+    {% endfor %}
+</body>
+</html>
