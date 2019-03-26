@@ -7,7 +7,7 @@
 <body>
     <!-- {{poems}} -->
     {% for poem in poems %}
-        <h1>bai tho so {{ loop.index }}</h1>
+       <a href="/poem/{{ loop.index0 }}"> <h1>bai tho so {{ loop.index }}</h1> </a>
         <!-- loop.index or loop.index0 la cong thuc lun nha -->
         <h3>{{ poem.title }}</h3>
         <p>{{ poem.content }}</p>
