@@ -4,8 +4,8 @@ client=MongoClient(mongo_uri)
 pilot_app=client.c4e
 services=pilot_app['posts']
 mypost={
-    'title':'TOT',
+    'title':'404_noT_FOuNd',
     'author':'NTĐ',
-    'content':'hự hự'
+    'content':'những lúc như này cần một nụ cười thật tươi'
 }
 services.insert_one(mypost)
