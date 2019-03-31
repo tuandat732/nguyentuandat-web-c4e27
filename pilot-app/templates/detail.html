@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div>
+                {% if detail_person.gender == 'male' %}
+                    <img src="/static/images/male1.png" alt="">
+                {% else %}
+                    <img src="/static/images/female.png" alt="">
+                {% endif %}
+                <br>
+                <b>name: </b> {{detail_person.name}} <br>
+                <b>age: </b> {{ detail_person.age}} <br>
+                <b>gender: </b> {{detail_person.gender}} <br>
+                <b>height: </b> {{detail_person.height}} <br>
+                <b>available: </b> {{detail_person.available}} <br>
+                <b>address: </b> {{detail_person.address}} <br>
+                </div>
+                <hr>
+</body>
+</html>

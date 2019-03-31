@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> <font color='red'>ALL RIVER</font></h1>
+        {% for i in continent %}
+        <div>
+            <img src="static/{{ i }}.gif" alt="">
+            <pre><h1>      {{ i }}     <button><a href="home/detail/{{ i }}">see all river</a></button></h1> </pre>
+            <hr>
+        </div>
+        {% endfor %}
+
+</body>
+</html>

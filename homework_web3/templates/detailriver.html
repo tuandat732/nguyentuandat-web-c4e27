@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <form action="" >
+                
+                <p>all river have length you want <input type="text" size="30" /></p>
+                <pre><p><input type="submit" value="sent" /></p></pre>
+                </form>
+    <h1><font color='red'>ALL RIVER in {{con}} </font></h1>
+    {% for i in list_river %}
+    <h1>NAME: {{ i.name }}</h1>
+    <h3>CONTINENT: {{ i.continent }} <br>
+    LENGTH: {{ i.length }}  <br></h3>
+    <hr>
+    {% endfor %}
+</body>
+</html>

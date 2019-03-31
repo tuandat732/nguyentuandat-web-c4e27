@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>blogme</title>
+</head>
+<body>
+    <h1></h1>
+    {% for i in all_service %}
+    <div>
+    {% if i.gender == 'male' %}
+        <img src="../static/images/male1.png" alt="">
+    {% else %}
+        <img src="../static/images/female.png" alt="">
+    {% endif %}
+    <br>
+    <b>name: </b> {{i.name}} <br>
+    <b>age: </b> {{ i.age}} <br>
+    <b>gender: </b> {{i.gender}} <br>
+    <b>height: </b> {{i.height}} <br>
+    <b>available: </b> {{i.available}} <br>
+    <b>address: </b> {{i.address}} <br>
+    <pre> <button> <a href="/all-service/detail/{{  i._id }}">show detail</a> </button>  <button><a href="/all-service/delete/{{ i._id }}">delete</a></button></pre>
+    </div>
+    <hr>
+    {% endfor %}
+</body>
+</html>
