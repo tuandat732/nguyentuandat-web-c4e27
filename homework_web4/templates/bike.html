@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+     #head{
+         background-color: #848484;
+         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+         height:80px ;
+         padding: 20px
+     }
+     #head .login{
+         float:right;
+         position: relative;
+         right: 30px;
+     }
+     #body{
+         position: relative;
+         left:30% ;
+         top: 100px;
+     }
+     #body input{
+         position: absolute;
+         left: 15%;
+         border-style:solid
+     }
+     #body label{
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         font-size: 20px;
+         color:#4CAF50
+     }
+     #nava ul {
+         list-style-type: none;
+         background-color: #B2B2B2;
+         width: 100%;
+         overflow: hidden;
+         text-align: center;
+     }
+     li{
+         float: left;
+     }
+     li a{
+         text-align: center;
+         display: block;
+         padding: 8px 16px;
+         text-decoration: none;
+         color:white;
+     }
+     li a:hover {
+        background-color: #555;
+        color: white;
+    }
+    li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+    </style>
+</head>
+<body style="background-color: #D7D7D7">
+    <div id="head">
+        <span class='he' style="color:white;font-size:60px;position: relative;left:100px;">Trang thống kê xe máy</span>
+        <span class="login">
+        <label style="color:white">user</label>
+        <input type="text" name='input_name'> <br>
+        <label style="color:white">pass</label>
+        <input type="password" name='input_pass'> <br>
+        <button style="position:relative;right:5px">login</button>
+        </span>
+    </div>
+    <div id='nava' style="box-shadow:0 2px 5px #848484">
+            <ul>
+                <li><a href="/home">Trang chủ</a></li>
+                <li><a class="active" href="/create">Cập nhật</a></li>
+                <li><a href="/view">Danh sách</a></li>
+            </ul> 
+        </div>
+    <div id="body">
+    <p style="color:#FA0A3A;font-size:50px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Cập nhật danh sách xe máy</p> <br>
+    <form method="POST">
+        <label>Model</label>
+        <input type="text" name='input_model'> <br>
+        <label>Daily fee (VND)</label>
+        <input type="text" name='input_dailyfee'> <br>
+        <label>Image</label>
+        <input type="text" name='input_image'> <br>
+        <label>Year</label>
+        <input type="text" name='input_year'> <br> <br>
+        <button style="color:white;background-color:#4CAF50; border-style:outset;position: relative;left:290px">Submit</button>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px
+        }
+     #head{
+         background-color: #848484;
+         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+         height:80px ;
+         width: 100%;
+         padding: 20px
+     }
+     #head .login{
+         float: right;
+         position: relative;
+         right: 30px;
+     }
+     #body{
+         position: relative;
+         top: 100px;
+         left: 10px
+     }
+     #nava ul {
+         list-style-type: none;
+         background-color: #B2B2B2;
+         width: 100%;
+         overflow: hidden;
+         text-align: center;
+     }
+     li{
+         float: left;
+     }
+     li a{
+         text-align: center;
+         display: block;
+         padding: 8px 16px;
+         text-decoration: none;
+         color:white;
+     }
+     li a:hover {
+        background-color: #555;
+        color: white;
+    }
+    li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+    </style>
+</head>
+<body style="background-color: #D7D7D7">
+    <div id="head">
+        <span class='he' style="color:white;font-size:60px;position:relative;left:100px;">Trang thống kê xe máy</span>
+        <span class="login">
+        <label style="color:white">user</label>
+        <input type="text" name='input_name'> <br>
+        <label style="color:white">pass</label>
+        <input type="password" name='input_pass'> <br>
+        <button style="position:relative;right:5px">login</button>
+        </span>
+    </div>
+    <div id='nava' style="box-shadow:0 2px 5px #848484">
+            <ul>
+                <li><a href="/home">Trang chủ</a></li>
+                <li><a  href="/create">Cập nhật</a></li>
+                <li><a class="active" href="/view">Danh sách</a></li>
+            </ul> 
+        </div>
+    <div id="body">
+    {% for i in all_bike %}
+    <h1>Model: {{i.Model}}</h1>
+    <p>Daily fee (VND): {{i.Daily}}</p>
+    <img src="{{i.Image}}" alt="">
+    <p>Year: {{i.Year}}</p>
+    <br>
+    <hr style="color:green">
+    {%endfor%}
+    </div>
+
+</body>
+</html>
